@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Data Diri Siswa SMK Era Pembangunan 3</title>
+</head>
+<body>
+<h1><center>Pendaftaran Data Diri SIswa SMK</center></h1>
+<form action="Terimakasih.html" method="POST">
+	<p><center>Tanggal/Waktu:<span id="tanggalwaktu"></span></p>
+		<script>
+			var tw = new Date();
+			if(tw.getTimezoneOffset() == 0) (a=tw.getTime() + (7*60*60*1000))
+			else (a=tw.getTime());
+		tw.setTime(a);
+		var tahun= tw.getFullYear ();
+		var hari= tw.getDay ();
+		var bulan= tw.getMonth ();
+		var tanggal= tw.getDate ();
+		var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jumat,","Sabtu,");
+		var bulanarray= new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+		document.getElementById("tanggalwaktu").innerHTML=hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun+" Jam "+ ((tw.getHours() < 10 ) ? "0" : "") + tw.getHours() + ":" + ((tw.getMinutes() < 10 ) ? "0" : "") + tw.getMinutes() + ("WIB");
+		</script>
+	</center>
+	<p>Nama		:<input type=teks>
+	<P><label>Tanggal Lahir</label>
+				<input type="date" name="tanggal"/>
+	<p>Alamat	:<input type=teks>
+	<p>Kelas	:<select>
+				 <option>
+				 <option>X
+				 <option>XI
+				 <option>XII
+				 </option>
+	             </select>
+	<p>Jurusan      : <select>
+				<option>
+	<option>TKJ
+	<option>BDP
+	<option>MP
+	<option>AKL
+	<option>DKV
+	</option>
+</select>
+
+<p><label>Jenis kelamin:</label>
+	<label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+	<label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+
+<p>Agama 		: <Select>
+				<option>
+				<option> Islam
+				<option> Kristen
+				<option> Khatolik
+				<option> Hindu
+				<option> Budha
+				<option> Atheis	
+				</option>
+				</select>			
+
+
+<p>Hobi         : <input type=teks>
+
+<p>
+<input type="submit" name="submit" value="Daftar" />
+
+<div>Copyright &copy; 2022 by FGH </div>
+
+	</p>
+    </fieldset>
+</form>
+</body>
+</html>
+</p>
+</body>
+</html>
